@@ -1,0 +1,214 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+::-moz-focus-outer,
+::-moz-focus-inner {
+    border: 0px !important;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* glob */
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.container {
+    max-width: 1350px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+.card-list {
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+}
+
+.list-item {
+    display: flex;
+    outline: 1px solid black;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex: 0 0 auto;
+    background-color: #f9f9f9;
+    font-size: 50px;
+    
+}
+
+.card-close {
+    background-image: url('../img/card-close.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.btn {
+    width: 25%;
+    height: 100%;
+    font-weight: 400;
+    font-size: 60px;
+    background-color: white;
+    border-radius: 35px;
+    padding: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+/* Основной стиль для формы */
+.form-start {
+    position: absolute;
+    /* Позволяет использовать top и left */
+    top: 50%;
+    /* Устанавливает форму в середину по вертикали */
+    left: 50%;
+    /* Устанавливает форму в середину по горизонтали */
+    transform: translate(-50%, -50%);
+    /* Сдвигает форму, чтобы центр совпадал с top/left */
+    background-color: #f9f9f9;
+    /* Фоновый цвет формы */
+    padding: 20px;
+    /* Внутренние отступы */
+    border-radius: 10px;
+    /* Скруглённые углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Тень для формы */
+    flex-direction: column;
+    gap: 20px;
+    min-width: 500px;
+}
+
+.form-start span {
+    font-size: 20px;
+    color: gray;
+}
+
+/* Стили для инпутов */
+.form-input {
+    display: block;
+    /* Каждый input на отдельной строке */
+    width: 100%;
+    /* Занимает всю ширину формы */
+    margin-bottom: 10px;
+    /* Отступы между инпутами */
+    padding: 10px;
+    /* Внутренние отступы */
+    font-size: 16px;
+    /* Размер текста */
+    border: 1px solid #ccc;
+    /* Цвет границы */
+    border-radius: 5px;
+    /* Скруглённые углы */
+    font-size: 20px;
+}
+
+/* Стили для кнопки */
+.button-start {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    background-color: #007BFF;
+    /* Синий цвет кнопки */
+    color: white;
+    /* Белый текст */
+    border: none;
+    /* Без рамки */
+    border-radius: 5px;
+    cursor: pointer;
+    /* Указывает, что это кнопка */
+    text-align: center;
+}
+
+.button-start:hover {
+    background-color: #0056b3;
+    /* Темнее при наведении */
+}
+
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 35px;
+    display: none;
+    /* Сначала скрыта */
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.popup.hide {
+    opacity: 0;
+    pointer-events: none;
+    /* Чтобы не мешало взаимодействовать с другими элементами */
+}
+
+.app-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-wrapper h1 {
+    font-size: 100px;
+}
